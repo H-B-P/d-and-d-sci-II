@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>D&D.Sci II Evaluator</title>
+</head>
+<body>
+  <div> Longsword of Wounding +2 [66gp] <span id="LoW"><button onclick="buy_LoW()">Purchase</button></div>
+  <br>
+  <div> Warhammer of Justice +1 [41gp] <span id="WoJ"><button onclick="buy_WoJ()">Purchase</button></div>
+  <br>
+  <div> Hammer of Capability [35gp] <span id="HoC"><button onclick="buy_HoC()">Purchase</button></div>
+  <br>
+  <div> Pendant of Truth [38gp] <span id="PoT"><button onclick="buy_PoT()">Purchase</button></div>
+  <br>
+  <div> Ring of Joy +5 [32gp] <span id="RoJ"><button onclick="buy_RoJ()">Purchase</button></div>
+  <br>
+  <div> Warhammer of Flame +2 [65gp] <span id="WoF"><button onclick="buy_WoF()">Purchase</button></div>
+  <br>
+  <div> Battleaxe of Glory [23gp] <span id="BoG"><button onclick="buy_BoG()">Purchase</button></div>
+  <br>
+  <div> Plough of Plenty [35gp] <span id="PoP"><button onclick="buy_PoP()">Purchase</button></div>
+  <br>
+  <div> Saw of Capability +1 [35gp] <span id="SoC"><button onclick="buy_SoC()">Purchase</button></div>
+  <br>
+  <div> Amulet of Wounding +2 [35gp] <span id="AoW"><button onclick="buy_AoW()">Purchase</button></div>
+  <br>
+  <div> Pendant of Hope [34gp] <span id="PoH"><button onclick="buy_PoH()">Purchase</button></div>
+  <br>
+  <div> Pendant of Joy [39gp] <span id="PoJ"><button onclick="buy_PoJ()">Purchase</button></div>
+  <br>
+  <br>
+  <div id="Gold">Gold remaining: 200</div>
+  <br>
+  <br>
+  <button onclick="quest()">Conclude Shopping Trip</button>
+  <br>
+  <br>
+  <div id="result"></div>
+<b style="font-size:28px">
+</div>
+  
+</b>
+<script id="jsbin-javascript">
+
+gold=200
+mana=0
+
+function buy_LoW(){
+ if (gold>=66){
+  gold=gold-66
+  mana=mana+20
+  document.getElementById("LoW").innerHTML = "Purchased!"
+  document.getElementById("Gold").innerHTML = "Gold Remaining: " + gold
+ }
+}
+
+function buy_WoJ(){
+ if (gold>=65){
+  gold=gold-65
+  mana=mana+21
+  document.getElementById("WoJ").innerHTML = "Purchased!"
+  document.getElementById("Gold").innerHTML = "Gold Remaining: " + gold
+ }
+}
+
+function buy_HoC(){
+ if (gold>=35){
+  gold=gold-35
+  mana=mana+36
+  document.getElementById("HoC").innerHTML = "Purchased!"
+  document.getElementById("Gold").innerHTML = "Gold Remaining: " + gold
+ }
+}
+
+function buy_PoT(){
+ if (gold>=38){
+  gold=gold-38
+  mana=mana+64
+  document.getElementById("PoT").innerHTML = "Purchased!"
+  document.getElementById("Gold").innerHTML = "Gold Remaining: " + gold
+ }
+}
+
+function buy_RoJ(){
+ if (gold>=32){
+  gold=gold-32
+  mana=mana+8
+  document.getElementById("RoJ").innerHTML = "Purchased!"
+  document.getElementById("Gold").innerHTML = "Gold Remaining: " + gold
+ }
+}
+
+function buy_WoF(){
+ if (gold>=65){
+  gold=gold-65
+  mana=mana+21
+  document.getElementById("WoF").innerHTML = "Purchased!"
+  document.getElementById("Gold").innerHTML = "Gold Remaining: " + gold
+ }
+}
+
+function buy_BoG(){
+ if (gold>=23){
+  gold=gold-23
+  mana=mana+6
+  document.getElementById("BoG").innerHTML = "Purchased!"
+  document.getElementById("Gold").innerHTML = "Gold Remaining: " + gold
+ }
+}
+
+function buy_PoP(){
+ if (gold>=35){
+  gold=gold-35
+  mana=mana+20
+  document.getElementById("PoP").innerHTML = "Purchased!"
+  document.getElementById("Gold").innerHTML = "Gold Remaining: " + gold
+ }
+}
+
+function buy_SoC(){
+ if (gold>=35){
+  gold=gold-35
+  mana=mana+10
+  document.getElementById("SoC").innerHTML = "Purchased!"
+  document.getElementById("Gold").innerHTML = "Gold Remaining: " + gold
+ }
+}
+
+function buy_AoW(){
+ if (gold>=35){
+  gold=gold-35
+  mana=mana+16
+  document.getElementById("AoW").innerHTML = "Purchased!"
+  document.getElementById("Gold").innerHTML = "Gold Remaining: " + gold
+ }
+}
+
+function buy_PoH(){
+ if (gold>=34){
+  gold=gold-34
+  mana=mana+54
+  document.getElementById("PoH").innerHTML = "Purchased!"
+  document.getElementById("Gold").innerHTML = "Gold Remaining: " + gold
+ }
+}
+
+function buy_PoJ(){
+ if (gold>=39){
+  gold=gold-39
+  mana=mana+20
+  document.getElementById("PoJ").innerHTML = "Purchased!"
+  document.getElementById("Gold").innerHTML = "Gold Remaining: " + gold
+ }
+}
+
+function quest(){
+ if (mana>=120){
+  document.getElementById("result").innerHTML = "You got enough mana! You end the day having gained " + gold + "gp"
+ }
+ else{
+  document.getElementById("result").innerHTML = "You didn't get enough mana. You end the day owing " + (200-gold) + "gp"
+ }
+}
+
+</script>
+</body>
+</html>
